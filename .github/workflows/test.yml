@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: h-nago/github-actions-test
+    - uses: h-nago/github-actions-test@ref
 
     - run: npm ci
     - run: npm test
