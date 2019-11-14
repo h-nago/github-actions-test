@@ -60,6 +60,15 @@ const wait = __webpack_require__(949);
 // most @actions toolkit packages have async methods
 async function run() {
   try { 
+    const token = core.getInput('repo-token', {required: true});
+    const octokit = new github.GitHub(token);
+    const pullRequests = await octokit.pulls.list({
+      owner: github.context.repo.owner,
+      repo: github.context.repo.repo
+    })
+    console.log(pullRequests);
+
+
     const ms = core.getInput('milliseconds');
     console.log(`Waiting ${ms} milliseconds ...`)
 
