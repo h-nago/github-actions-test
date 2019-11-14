@@ -15,9 +15,11 @@ jobs:
 
     - run: npm ci
     # - run: npm test
+    - run: npm run package
     - uses: ./
       with:
         milliseconds: 1000
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         # - uses: h-nago/github-actions-test@0.0.1
         #   with:
         #     milliseconds: 3000
