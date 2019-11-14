@@ -1,5 +1,5 @@
-const core = require('@actions/github');
-const github = require('@actions/core');
+const github = require('@actions/github');
+const core = require('@actions/core');
 const wait = require('./wait');
 
 
