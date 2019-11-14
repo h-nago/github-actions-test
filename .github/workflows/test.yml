@@ -10,8 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v1
-    - uses: h-nago/github-actions-test@0.0.1
+    - uses: actions/checkout@v1
+      # - uses: h-nago/github-actions-test@0.0.1
 
     - run: npm ci
     - run: npm test
