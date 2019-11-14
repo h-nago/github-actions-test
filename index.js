@@ -13,6 +13,15 @@ async function run() {
     core.debug((new Date()).toTimeString())
 
     core.setOutput('time', new Date().toTimeString());
+
+
+    const token = core.getInput('repo-token', {required: true});
+    const octokit = new github.GitHub(token);
+    const pullRequests= octokit.pulls.list({
+      owner: github.context.repo.owner,
+      repo: github.context.repo.repo
+    })
+    console.log(pullRequests);
   } 
   catch (error) {
     core.setFailed(error.message);
