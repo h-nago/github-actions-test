@@ -19,3 +19,5 @@ jobs:
       with:
         milliseconds: 1000
     - uses: h-nago/github-actions-test@0.0.1
+      with:
+        milliseconds: 3000
